@@ -16,10 +16,10 @@
   },
   "devDependencies": {
     "eslint": "^5.0.0",
-    "gulp-util": "3.0.x",
     "mocha": "*",
     "prettier": "^1.13.5",
-    "should": "*"
+    "should": "*",
+    "vinyl": "2.2.0"
   },
   "engines": {
     "node": ">= 0.9.0"
