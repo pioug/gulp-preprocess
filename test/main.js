@@ -1,12 +1,12 @@
 var should = require("should");
-var gutil = require("gulp-util");
+var File = require("vinyl");
 var preprocess = require("../");
 var fs = require("fs");
 
 require("mocha");
 
 function fixtureFile(fileName) {
-  return new gutil.File({
+  return new File({
     base: "test/fixtures",
     cwd: "test/",
     path: "test/fixtures/" + fileName,
