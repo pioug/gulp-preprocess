@@ -17,6 +17,7 @@
   "devDependencies": {
     "gulp-util": "3.0.x",
     "mocha": "*",
+    "prettier": "^1.13.5",
     "should": "*"
   },
   "engines": {
