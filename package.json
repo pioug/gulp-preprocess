@@ -15,6 +15,7 @@
     "preprocess": "^3.0.0"
   },
   "devDependencies": {
+    "eslint": "^5.0.0",
     "gulp-util": "3.0.x",
     "mocha": "*",
     "prettier": "^1.13.5",
