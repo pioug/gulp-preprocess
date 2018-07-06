@@ -25,7 +25,7 @@ module.exports = function(options) {
 
     contents = file.contents.toString("utf8");
     contents = pp.preprocess(contents, context, extension);
-    file.contents = new Buffer(contents);
+    file.contents = Buffer.from(contents);
 
     callback(null, file);
   }
