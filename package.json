@@ -10,16 +10,16 @@
   "author": "Jason Sandmeyer",
   "main": "./index.js",
   "dependencies": {
-    "lodash": "4.17.10",
-    "map-stream": "0.1.x",
+    "lodash": "^4.17.10",
+    "map-stream": "^0.1.x",
     "preprocess": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "5.0.1",
+    "eslint": "^5.1.0",
     "mocha": "*",
-    "prettier": "1.13.7",
+    "prettier": "^1.13.7",
     "should": "*",
-    "vinyl": "2.2.0"
+    "vinyl": "^2.2.0"
   },
   "engines": {
     "node": ">= 0.9.0"
