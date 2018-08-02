@@ -15,10 +15,10 @@
     "preprocess": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "^5.1.0",
-    "mocha": "*",
-    "prettier": "^1.13.7",
-    "should": "*",
+    "eslint": "^5.2.0",
+    "mocha": "^5.2.0",
+    "prettier": "^1.14.0",
+    "should": "^13.2.3",
     "vinyl": "^2.2.0"
   },
   "engines": {
