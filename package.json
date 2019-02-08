@@ -10,14 +10,14 @@
   "author": "Jason Sandmeyer",
   "main": "./index.js",
   "dependencies": {
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.11",
     "map-stream": "^0.1.x",
     "preprocess": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "^5.2.0",
+    "eslint": "^5.13.0",
     "mocha": "^5.2.0",
-    "prettier": "^1.14.0",
+    "prettier": "^1.16.4",
     "should": "^13.2.3",
     "vinyl": "^2.2.0"
   },
