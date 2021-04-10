@@ -12,7 +12,7 @@
   "dependencies": {
     "lodash": "^4.17.15",
     "preprocess": "^3.0.0",
-    "through2": "4.0.2"
+    "through2": "^4.0.2"
   },
   "devDependencies": {
     "eslint": "7.24.0",
