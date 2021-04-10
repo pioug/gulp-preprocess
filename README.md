@@ -1,4 +1,4 @@
-# gulp-preprocess [![NPM version](https://img.shields.io/npm/v/gulp-preprocess.svg)](https://www.npmjs.com/package/gulp-preprocess) [![Build Status](https://img.shields.io/travis/pioug/gulp-preprocess.svg)](https://travis-ci.org/pioug/gulp-preprocess) [![Dependency Status](https://img.shields.io/david/pioug/gulp-preprocess.svg)](https://david-dm.org/pioug/gulp-preprocess)
+# gulp-preprocess [![NPM version](https://img.shields.io/npm/v/gulp-preprocess.svg)](https://www.npmjs.com/package/gulp-preprocess) [![Run tests](https://github.com/nfroidure/svg-pathdata/actions/workflows/test.yml/badge.svg)](https://github.com/nfroidure/svg-pathdata/actions/workflows/test.yml) [![Dependency Status](https://img.shields.io/david/pioug/gulp-preprocess.svg)](https://david-dm.org/pioug/gulp-preprocess)
 
 > [Gulp](http://gulpjs.com) plugin to preprocess HTML, JavaScript, and other files based on custom context or environment configuration
 
