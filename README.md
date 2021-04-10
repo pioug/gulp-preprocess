@@ -10,7 +10,7 @@
 </tr>
 <tr>
 <td>Node Version</td>
-<td>>= 6.14.3</td>
+<td>>= 14</td>
 </tr>
 <tr>
 <td>Gulp Version</td>
