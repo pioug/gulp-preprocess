@@ -1,13 +1,13 @@
 var _ = require("lodash");
-var map = require("map-stream");
 var pp = require("preprocess");
 var path = require("path");
+var through = require('through2');
 
 module.exports = function (options) {
   var opts = _.merge({}, options);
   var context = _.merge({}, process.env, opts.context);
 
-  function ppStream(file, callback) {
+  function ppStream(file, encoding, callback) {
     var contents, extension;
 
     // TODO: support streaming files
@@ -30,7 +30,7 @@ module.exports = function (options) {
     callback(null, file);
   }
 
-  return map(ppStream);
+  return through.obj(ppStream);
 };
 
 function getExtension(filename) {

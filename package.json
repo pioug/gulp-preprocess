@@ -11,8 +11,8 @@
   "main": "./index.js",
   "dependencies": {
     "lodash": "^4.17.15",
-    "map-stream": "^0.1.x",
-    "preprocess": "^3.0.0"
+    "preprocess": "^3.0.0",
+    "through2": "4.0.2"
   },
   "devDependencies": {
     "eslint": "7.24.0",
