@@ -15,11 +15,11 @@
     "through2": "^4.0.2"
   },
   "devDependencies": {
-    "eslint": "7.24.0",
-    "mocha": "^8.3.2",
-    "prettier": "^2.2.1",
+    "eslint": "^8.57.0",
+    "mocha": "^10.3.0",
+    "prettier": "^3.2.5",
     "should": "^13.2.3",
-    "vinyl": "^2.2.0"
+    "vinyl": "^3.0.0"
   },
   "engines": {
     "node": ">= 14"
