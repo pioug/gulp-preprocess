@@ -1,11 +1,10 @@
-var _ = require("lodash");
 var pp = require("preprocess");
 var path = require("path");
 var through = require('through2');
 
 module.exports = function (options) {
-  var opts = _.merge({}, options);
-  var context = _.merge({}, process.env, opts.context);
+  var opts = Object.assign({}, options);
+  var context = Object.assign({}, process.env, opts.context);
 
   function ppStream(file, encoding, callback) {
     var contents, extension;
@@ -19,9 +18,7 @@ module.exports = function (options) {
     context.srcDir = opts.includeBase || path.dirname(file.path);
     context.NODE_ENV = context.NODE_ENV || "development";
 
-    extension = _.isEmpty(opts.extension)
-      ? getExtension(context.src)
-      : opts.extension;
+    extension = opts.extension ?? getExtension(context.src);
 
     contents = file.contents.toString("utf8");
     contents = pp.preprocess(contents, context, extension);
