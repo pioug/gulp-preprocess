@@ -19,7 +19,6 @@
     "javascript",
     "preprocessor"
   ],
-  "homepage": "http://github.com/pioug/gulp-preprocess",
   "bugs": {
     "url": "https://github.com/pioug/gulp-preprocess/issues"
   },
@@ -27,16 +26,15 @@
   "author": "Jason Sandmeyer",
   "repository": {
     "type": "git",
-    "url": "http://github.com/pioug/gulp-preprocess.git"
+    "url": "git+https://github.com/pioug/gulp-preprocess.git"
   },
-  "directories": {
-    "test": "test"
-  },
-  "main": "./index.js",
+  "main": "index.js",
+  "exports": "./index.js",
   "scripts": {
     "format": "oxfmt --write \"**/*.{js,json,yml,yaml,md}\" --ignore-path .oxignore",
     "format:check": "oxfmt --check \"**/*.{js,json,yml,yaml,md}\" --ignore-path .oxignore",
     "lint": "oxlint --deny-warnings . --ignore-path .oxignore",
+    "prepublishOnly": "npm run format:check && npm run lint && npm test",
     "test": "mocha --reporter spec"
   },
   "dependencies": {
@@ -50,6 +48,6 @@
     "vinyl": "^3.0.0"
   },
   "engines": {
-    "node": ">= 24"
+    "node": ">=24.0.0"
   }
 }
