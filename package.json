@@ -1,6 +1,6 @@
 {
   "name": "gulp-preprocess",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "Gulp plugin to preprocess HTML, JavaScript, and other files based on custom context or environment configuration",
   "keywords": [
     "ENV",
