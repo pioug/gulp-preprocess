@@ -13,8 +13,8 @@
     "preprocess": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.57.0",
     "mocha": "^12.0.0-beta-9",
+    "oxlint": "^1.47.0",
     "prettier": "^3.2.5",
     "should": "^13.2.3",
     "vinyl": "^3.0.0"
@@ -23,6 +23,7 @@
     "node": ">= 24"
   },
   "scripts": {
+    "lint": "oxlint --deny-warnings index.js test/main.js",
     "test": "mocha --reporter spec"
   },
   "bugs": {
