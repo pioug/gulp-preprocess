@@ -54,14 +54,16 @@ gulp.task("scripts", function () {
   <!-- @if NODE_ENV='production' -->
   <script src="some/production/lib/like/analytics.js"></script>
   <!-- @endif -->
-
 </head>
 <body>
   <!-- @ifdef DEBUG -->
-  <h1>Debugging mode - <!-- @echo RELEASE_TAG --> </h1>
+  <h1>
+    Debugging mode -
+    <!-- @echo RELEASE_TAG -->
+  </h1>
   <!-- @endif -->
   <p>
-  <!-- @include welcome_message.txt -->
+    <!-- @include welcome_message.txt -->
   </p>
 </body>
 ```

@@ -1,53 +1,55 @@
 {
   "name": "gulp-preprocess",
-  "description": "Gulp plugin to preprocess HTML, JavaScript, and other files based on custom context or environment configuration",
   "version": "5.0.0",
+  "description": "Gulp plugin to preprocess HTML, JavaScript, and other files based on custom context or environment configuration",
+  "keywords": [
+    "ENV",
+    "coffeescript",
+    "conditional",
+    "debug",
+    "echo",
+    "environment",
+    "exclude",
+    "gulp-plugin",
+    "gulpplugin",
+    "html",
+    "ifdef",
+    "ifndef",
+    "include",
+    "javascript",
+    "preprocessor"
+  ],
   "homepage": "http://github.com/pioug/gulp-preprocess",
+  "bugs": {
+    "url": "https://github.com/pioug/gulp-preprocess/issues"
+  },
+  "license": "MIT",
+  "author": "Jason Sandmeyer",
   "repository": {
     "type": "git",
     "url": "http://github.com/pioug/gulp-preprocess.git"
   },
-  "author": "Jason Sandmeyer",
+  "directories": {
+    "test": "test"
+  },
   "main": "./index.js",
+  "scripts": {
+    "format": "oxfmt --write package.json package-lock.json .oxlintrc.json index.js test/main.js .github/workflows/test.yaml README.md LICENSE.md",
+    "format:check": "oxfmt --check package.json package-lock.json .oxlintrc.json index.js test/main.js .github/workflows/test.yaml README.md LICENSE.md",
+    "lint": "oxlint --deny-warnings index.js test/main.js",
+    "test": "mocha --reporter spec"
+  },
   "dependencies": {
     "preprocess": "^3.0.0"
   },
   "devDependencies": {
     "mocha": "^12.0.0-beta-9",
+    "oxfmt": "^0.32.0",
     "oxlint": "^1.47.0",
-    "prettier": "^3.2.5",
     "should": "^13.2.3",
     "vinyl": "^3.0.0"
   },
   "engines": {
     "node": ">= 24"
-  },
-  "scripts": {
-    "lint": "oxlint --deny-warnings index.js test/main.js",
-    "test": "mocha --reporter spec"
-  },
-  "bugs": {
-    "url": "https://github.com/pioug/gulp-preprocess/issues"
-  },
-  "directories": {
-    "test": "test"
-  },
-  "keywords": [
-    "gulpplugin",
-    "gulp-plugin",
-    "preprocessor",
-    "html",
-    "javascript",
-    "coffeescript",
-    "debug",
-    "environment",
-    "ENV",
-    "conditional",
-    "include",
-    "exclude",
-    "ifdef",
-    "ifndef",
-    "echo"
-  ],
-  "license": "MIT"
+  }
 }

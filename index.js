@@ -11,8 +11,7 @@ module.exports = function (options) {
 
     // TODO: support streaming files
     if (file.isNull()) return callback(null, file); // pass along
-    if (file.isStream())
-      return callback(new Error("gulp-preprocess: Streaming not supported"));
+    if (file.isStream()) return callback(new Error("gulp-preprocess: Streaming not supported"));
 
     context.src = file.path;
     context.srcDir = opts.includeBase || path.dirname(file.path);
