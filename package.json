@@ -35,7 +35,7 @@
     "format:check": "oxfmt --check \"**/*.{js,json,yml,yaml,md}\" --ignore-path .oxignore",
     "lint": "oxlint --deny-warnings . --ignore-path .oxignore",
     "prepublishOnly": "npm run format:check && npm run lint && npm test",
-    "test": "mocha --reporter spec"
+    "test": "mocha"
   },
   "dependencies": {
     "preprocess": "^3.0.0"
