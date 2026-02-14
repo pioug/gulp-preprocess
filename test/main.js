@@ -1,4 +1,4 @@
-var should = require("should");
+var assert = require("assert");
 var File = require("vinyl");
 var preprocess = require("../");
 var fs = require("fs");
@@ -29,9 +29,9 @@ describe("gulp-preprocess", function () {
       var fakeFile = fixtureFile("test.html");
 
       stream.once("data", function (newFile) {
-        should.exist(newFile);
-        should.exist(newFile.contents);
-        String(newFile.contents).should.equal(fs.readFileSync("test/expected/test.html", "utf8"));
+        assert(newFile);
+        assert(newFile.contents);
+        assert.equal(String(newFile.contents), fs.readFileSync("test/expected/test.html", "utf8"));
         done();
       });
       stream.write(fakeFile);
@@ -48,9 +48,9 @@ describe("gulp-preprocess", function () {
       var fakeFile = fixtureFile("test.js");
 
       stream.once("data", function (newFile) {
-        should.exist(newFile);
-        should.exist(newFile.contents);
-        String(newFile.contents).should.equal(fs.readFileSync("test/expected/test.js", "utf8"));
+        assert(newFile);
+        assert(newFile.contents);
+        assert.equal(String(newFile.contents), fs.readFileSync("test/expected/test.js", "utf8"));
         done();
       });
       stream.write(fakeFile);
@@ -67,9 +67,12 @@ describe("gulp-preprocess", function () {
       var fakeFile = fixtureFile("test.coffee");
 
       stream.once("data", function (newFile) {
-        should.exist(newFile);
-        should.exist(newFile.contents);
-        String(newFile.contents).should.equal(fs.readFileSync("test/expected/test.coffee", "utf8"));
+        assert(newFile);
+        assert(newFile.contents);
+        assert.equal(
+          String(newFile.contents),
+          fs.readFileSync("test/expected/test.coffee", "utf8"),
+        );
         done();
       });
       stream.write(fakeFile);
@@ -81,9 +84,12 @@ describe("gulp-preprocess", function () {
       var fakeFile = fixtureFile("test.coffee");
 
       stream.once("data", function (newFile) {
-        should.exist(newFile);
-        should.exist(newFile.contents);
-        String(newFile.contents).should.equal(fs.readFileSync("test/expected/test.coffee", "utf8"));
+        assert(newFile);
+        assert(newFile.contents);
+        assert.equal(
+          String(newFile.contents),
+          fs.readFileSync("test/expected/test.coffee", "utf8"),
+        );
         done();
       });
       stream.write(fakeFile);
@@ -101,9 +107,10 @@ describe("gulp-preprocess", function () {
       var fakeFile = fixtureFile("test.html");
 
       stream.once("data", function (newFile) {
-        should.exist(newFile);
-        should.exist(newFile.contents);
-        String(newFile.contents).should.equal(
+        assert(newFile);
+        assert(newFile.contents);
+        assert.equal(
+          String(newFile.contents),
           fs.readFileSync("test/expected/test-base.html", "utf8"),
         );
         done();
@@ -123,9 +130,9 @@ describe("gulp-preprocess", function () {
       var fakeFile = fixtureFile("test.php");
 
       stream.once("data", function (newFile) {
-        should.exist(newFile);
-        should.exist(newFile.contents);
-        String(newFile.contents).should.equal(fs.readFileSync("test/expected/test.html", "utf8"));
+        assert(newFile);
+        assert(newFile.contents);
+        assert.equal(String(newFile.contents), fs.readFileSync("test/expected/test.html", "utf8"));
         done();
       });
       stream.write(fakeFile);
