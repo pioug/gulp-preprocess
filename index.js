@@ -1,6 +1,6 @@
 var pp = require("preprocess");
 var path = require("path");
-var through = require('through2');
+var Transform = require("node:stream").Transform;
 
 module.exports = function (options) {
   var opts = Object.assign({}, options);
@@ -27,7 +27,10 @@ module.exports = function (options) {
     callback(null, file);
   }
 
-  return through.obj(ppStream);
+  return new Transform({
+    objectMode: true,
+    transform: ppStream,
+  });
 };
 
 function getExtension(filename) {
