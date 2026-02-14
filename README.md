@@ -1,4 +1,4 @@
-# gulp-preprocess [![NPM version](https://img.shields.io/npm/v/gulp-preprocess.svg)](https://www.npmjs.com/package/gulp-preprocess) [![Run tests](https://github.com/nfroidure/svg-pathdata/actions/workflows/test.yml/badge.svg)](https://github.com/nfroidure/svg-pathdata/actions/workflows/test.yml)
+# gulp-preprocess [![NPM version](https://img.shields.io/npm/v/gulp-preprocess.svg)](https://www.npmjs.com/package/gulp-preprocess) [![Run tests](https://github.com/pioug/gulp-preprocess/actions/workflows/test.yaml/badge.svg)](https://github.com/pioug/gulp-preprocess/actions/workflows/test.yaml)
 
 > [Gulp](http://gulpjs.com) plugin to preprocess HTML, JavaScript, and other files based on custom context or environment configuration
 
@@ -10,7 +10,7 @@
 </tr>
 <tr>
 <td>Node Version</td>
-<td>>= 18</td>
+<td>>= 24</td>
 </tr>
 <tr>
 <td>Gulp Version</td>
@@ -36,7 +36,7 @@ var preprocess = require("gulp-preprocess");
 gulp.task("html", function () {
   gulp
     .src("./app/*.html")
-    .pipe(preprocess({ context: { NODE_ENV: "production", DEBUG: true } })) // To set environment variables in-line
+    .pipe(preprocess({ context: { NODE_ENV: "production", DEBUG: true } })) // To set environment variables inline
     .pipe(gulp.dest("./dist/"));
 });
 
@@ -93,7 +93,7 @@ CoffeeScript files are also supported.
 Type: `Object`
 Default: `{}`
 
-Context for directives used in your preprocessed files. The default context consists of the current user environment variables. Custom context is merged with `process.env`.
+Context for directives used in your preprocessed files. The default context consists of the current environment variables. Custom context is merged with `process.env`.
 
 #### options.includeBase
 
