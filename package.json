@@ -34,9 +34,9 @@
   },
   "main": "./index.js",
   "scripts": {
-    "format": "oxfmt --write package.json package-lock.json .oxlintrc.json index.js test/main.js .github/workflows/test.yaml README.md LICENSE.md",
-    "format:check": "oxfmt --check package.json package-lock.json .oxlintrc.json index.js test/main.js .github/workflows/test.yaml README.md LICENSE.md",
-    "lint": "oxlint --deny-warnings index.js test/main.js",
+    "format": "oxfmt --write \"**/*.{js,json,yml,yaml,md}\" --ignore-path .oxignore",
+    "format:check": "oxfmt --check \"**/*.{js,json,yml,yaml,md}\" --ignore-path .oxignore",
+    "lint": "oxlint --deny-warnings . --ignore-path .oxignore",
     "test": "mocha --reporter spec"
   },
   "dependencies": {
